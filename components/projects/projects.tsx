@@ -13,7 +13,7 @@ export default function Projects({ projects }: ProjectsProps) {
   return (
     <VStack align="start" spacing={8}>
       <Header underlineColor={ORANGE} mt={0} mb={0}>
-        Projects
+        Commercial projects
       </Header>
       <AnimateSharedLayout>
         <SimpleGrid columns={1} spacing={4} mt={5} w="100%">

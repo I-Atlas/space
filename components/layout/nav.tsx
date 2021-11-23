@@ -56,7 +56,7 @@ const NavLink: FC<NavLinkProps> = ({ name, path, onClose }) => {
   const router = useRouter();
   const link = {
     bg: useColorModeValue("gray.200", "#000000"),
-    color: useColorModeValue("blue.500", "blue.200"),
+    color: useColorModeValue("accent.500", "accent.400"),
   };
 
   return (
@@ -130,7 +130,7 @@ export default function Nav() {
 
   const menuProps = {
     bg: useColorModeValue("gray.200", "#000000"),
-    color: useColorModeValue("blue.500", "blue.200"),
+    color: useColorModeValue("accent.500", "accent.400"),
   };
 
   return (
@@ -144,26 +144,26 @@ export default function Nav() {
       >
         <Flex
           h={16}
-          alignItems={"center"}
-          justifyContent={"space-between"}
+          alignItems="center"
+          justifyContent="space-between"
           w={["90%", "85%", "80%"]}
           maxW={800}
           mx="auto"
         >
           <IconButton
-            size={"md"}
+            size="md"
             icon={isOpen ? <AiOutlineClose /> : <GiHamburgerMenu />}
-            aria-label={"Open Menu"}
+            aria-label="Open Menu"
             display={["inherit", "inherit", "none"]}
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={"center"}>
             <Box>
-              <NextLink href={"/"} passHref>
+              <NextLink href="/" passHref>
                 <Avatar
                   as={Link}
-                  size={"sm"}
-                  src={"https://avatars.githubusercontent.com/u/54947380?v=4"}
+                  size="sm"
+                  src="https://avatars.githubusercontent.com/u/54947380?v=4"
                 />
               </NextLink>
             </Box>
@@ -181,7 +181,7 @@ export default function Nav() {
                 />
               ))}
               <Menu autoSelect={false} isLazy>
-                {({ isOpen, onClose }) => (
+                {({ onClose }) => (
                   <>
                     <MenuButton
                       as={Button}
@@ -189,9 +189,9 @@ export default function Nav() {
                       size="sm"
                       px={2}
                       py={1.5}
-                      fontSize={"1em"}
-                      rounded={"md"}
-                      height={"auto "}
+                      fontSize="1em"
+                      rounded="md"
+                      height="auto"
                       _hover={menuProps}
                       _expanded={menuProps}
                       _focus={{ boxShadow: "none" }}
@@ -199,7 +199,7 @@ export default function Nav() {
                     >
                       Links
                     </MenuButton>
-                    <MenuList zIndex={5}>
+                    <MenuList bg={menuProps.bg} zIndex={5}>
                       {dropdownLinks.map((link, index) => (
                         <MenuLink
                           key={index}

@@ -5,7 +5,7 @@ export const projects: Project[] = [
     logo: "/assets/images/projects/bcs.svg",
     blurHash: "AfMuFp%J~Ss.",
     link: "https://lkbank.bcs.ru/",
-    desc: `Peterpitch is a tool that takes the fun in your company seriously and turns your meetings into real performance boosters. With Peterpitch, you round up the pack of employees and turn even the shakiest puppies into true wolves.`,
+    desc: `BCS Bank is a digital universal bank for retail investors, corporate clients and entrepreneurs under the Sfera Bank brand.`,
     technologies: ["typescript", "react", "node.js"],
   },
   {
@@ -14,9 +14,16 @@ export const projects: Project[] = [
     link: "https://lk.bcs.ru/",
     logo: "/assets/images/projects/bcs.svg",
     blurHash: "AfMuFp%J~Ss.",
-    desc: `This is a project management website for design and procurement teams.
-      It helps to collaborate and manage all of your floor plans in one place, writing specs, budgeting and timelines.
-      This project management website provides a wide variety of features like timeline tracking, spec sheet generation, integrated budget, vendor + inventory management, user usage tracking and many more.`,
+    desc: `Application for investments, trading in securities and currencies in the stock market - broker number 1 in the ratings of the Moscow Exchange.`,
     technologies: ["typescript", "react", "node.js"],
+  },
+  {
+    id: 3,
+    title: "MyDoc",
+    link: "",
+    logo: "/assets/images/projects/mydoc.png",
+    blurHash: "AfMuFp%J~Ss.",
+    desc: `A mobile application that allows you to choose YOUR doctor from the list of great specialists, book a date and time, store documents, analysis, receive prescriptions for medications and view all your activity. We made the design as simple as possible, but nevertheless friendly, because patients often feel anxious before going to the doctor and our application should help them to relax and feel in comfort at every step.`,
+    technologies: ["typescript", "react-native", "node.js"],
   },
 ];

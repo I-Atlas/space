@@ -10,20 +10,14 @@ export const institutes: Institute[] = [
     logo: "/assets/images/institutes/rsue.png",
     awards: [
       {
-        title: "Speed Programming Battle",
-        description: "Won speed programming battle which held at FAST - NUCES.",
-        date: "May 1, 2015",
+        title: "Hackathon KTiIB",
+        description: "Me and team Ødy won first place.",
+        date: "Apr 18, 2021",
       },
       {
-        title: "Silver Medal",
-        description:
-          "This medal was awarded to me by FAST - NUCES for getting a CGPA of 3.9 in 2nd semester.",
-        date: "May 1, 2014",
-      },
-      {
-        title: "Speed Programming Battle",
-        description: "Won speed programming battle which held at FAST - NUCES.",
-        date: "Nov 1, 2013",
+        title: "62nd Scientific Student Conference",
+        description: "Second place with the topic of the report - 5g networks.",
+        date: "Apr 28, 2019",
       },
     ],
   },

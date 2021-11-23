@@ -1,10 +1,4 @@
-import {
-  FaGithub,
-  FaDev,
-  FaLinkedin,
-  FaQuora,
-  FaTwitter,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTelegram } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 
 export const configs = {
@@ -14,15 +8,21 @@ export const configs = {
     accounts: [
       {
         url: "https://github.com/I-Atlas",
-        label: "Github Account",
+        label: "Github",
         type: "gray",
         icon: <FaGithub />,
       },
       {
         url: "https://linkedin.com/in/bolotov-iliya",
-        label: "LinkedIn Account",
+        label: "LinkedIn",
         type: "linkedin",
         icon: <FaLinkedin />,
+      },
+      {
+        url: "https://t.me/iliyabolotov",
+        label: "Telegram",
+        type: "linkedin",
+        icon: <FaTelegram />,
       },
       {
         url: "mailto:bolotov.iliya.w@gmail.com",

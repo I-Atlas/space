@@ -78,11 +78,8 @@ export default function Home({ projects }: HomeProps) {
             </Box>{" "}
             and I&apos;m a{" "}
             <Box as="span" whiteSpace="nowrap">
-              Full Stack Developer and
+              Software Engineer
             </Box>{" "}
-            <Box as="span" whiteSpace="nowrap">
-              an open source lover&nbsp;
-            </Box>
             from{" "}
             <Box as="span" whiteSpace="nowrap">
               Russia 🇷🇺
