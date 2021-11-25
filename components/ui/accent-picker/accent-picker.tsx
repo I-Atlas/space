@@ -3,6 +3,8 @@ import { Tooltip, IconButton, IconButtonProps } from "@chakra-ui/react";
 import { ColorKeys, accentKeys } from "components/ui/theme";
 import { useLocalSetting } from "hooks/use-local-setting";
 import AccentPickerIcon from "./accent-picker-icon";
+import { AnimatePresence } from "framer-motion";
+import { MotionBox } from "../motion";
 
 export default function AccentPicker({ ...props }: IconButtonProps) {
   const [key, setAccentKey] = useLocalSetting<ColorKeys>("accent", "red");
@@ -15,13 +17,19 @@ export default function AccentPicker({ ...props }: IconButtonProps) {
   }, [key]);
 
   return (
-    <Tooltip label="Color mode" aria-label="Color tooltip">
-      <IconButton
-        icon={<AccentPickerIcon />}
-        isRound
-        onMouseDown={update}
-        {...props}
-      />
-    </Tooltip>
+    <AnimatePresence exitBeforeEnter initial={false}>
+    <MotionBox
+      fontSize={["2xl", "3xl", "3xl"]}
+    >
+      <Tooltip label="Color mode" aria-label="Color tooltip">
+        <IconButton
+          icon={<AccentPickerIcon />}
+          isRound
+          onMouseDown={update}
+          {...props}
+        />
+      </Tooltip>
+      </MotionBox>
+    </AnimatePresence>
   );
 }

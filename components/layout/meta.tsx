@@ -28,7 +28,7 @@ export default function Meta({
 }
 
 Meta.defaultProps = {
-  title: "Iliya Bolotov - Frontend & Backend Developer",
+  title: "Iliya Bolotov - Software Engineer",
   keywords:
     "web development, programming, design, frontend, backend, computer science",
   description: "Software Engineer. Lover of web.",
