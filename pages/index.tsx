@@ -8,7 +8,7 @@ interface IndexProps {
 
 export default function Index({ projects }: IndexProps) {
   return (
-    <PageLayout title="Iliya Bolotov - Full Stack Developer">
+    <PageLayout title="Iliya Bolotov - Software Engineer">
       <Home projects={projects} />
     </PageLayout>
   );

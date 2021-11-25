@@ -22,24 +22,25 @@ export default function Timeline() {
             2021
           </Heading>
           <Box>
-            <TimelineItem icon={FiPackage}>
-              Published or contributed to{" "}
+            <TimelineItem icon={FiEdit2}>
+              {/* Published or contributed to{" "}
               <InternalLink
                 color={linkColor}
                 url="/open-source"
                 text={"9 open-source repositories"}
-              />
+              /> */}
+              Content coming soon
             </TimelineItem>
           </Box>
         </Box>
-        <Box>
+        {/* <Box>
           <Heading fontSize="2xl" fontWeight="600" my={5}>
             2020
           </Heading>
           <Box>
             <TimelineItem icon={FiEdit2}>Wrote 5 blog posts</TimelineItem>
           </Box>
-        </Box>
+        </Box> */}
       </VStack>
     </PageSlideFade>
   );

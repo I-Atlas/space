@@ -2,7 +2,7 @@ export const companies: Company[] = [
   {
     title: "Umbrella IT",
     alt: "umbrellait",
-    role: "Web Developer",
+    role: "Software Engineer",
     skills: ["typescript", "react", "node.js"],
     period: "November 2020 - Present",
     logo: "/assets/images/companies/umbrellait.jpg",
