@@ -21,7 +21,7 @@ export default function Meta({
       <meta name="keywords" content={keywords} />
       <meta name="description" content={description} />
       <meta property="og:title" content={title} />
-      <meta property="og:image" content={image ? image : "/logo512.png"} />
+      <meta property="og:image" content={image ? image : "/iliya.jpg"} />
       <title>{title}</title>
     </Head>
   );
@@ -30,6 +30,6 @@ export default function Meta({
 Meta.defaultProps = {
   title: "Iliya Bolotov - Software Engineer",
   keywords:
-    "web development, programming, design, frontend, backend, computer science",
+    "development, programming, design, frontend, backend, computer science, management",
   description: "Software Engineer. Lover of web.",
 };
