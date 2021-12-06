@@ -223,9 +223,9 @@ export default function Nav() {
               variant="ghost"
               zIndex={1}
               color={linkColor}
-              mr={2}
+              mr={0}
             />
-            <ColorModeSwitcher justifySelf="flex-end" />
+            <ColorModeSwitcher ml={0} justifySelf="flex-end" />
           </Flex>
         </Flex>
 
