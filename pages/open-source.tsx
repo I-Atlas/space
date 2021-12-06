@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   VStack,
   Text,
@@ -6,15 +7,14 @@ import {
   IconButton,
   Tooltip,
 } from "@chakra-ui/react";
-import { PageSlideFade } from "components/ui/page-transitions";
-import Header from "components/layout/header";
 import { RiSignalTowerLine, RiWifiOffLine } from "react-icons/ri";
+import useSound from "use-sound";
+import Header from "components/layout/header";
 import OfflineData from "components/open-source/offline-data";
 import LiveData from "components/open-source/live-data";
-import { repositories } from "data/repositories";
-import useSound from "use-sound";
 import PageLayout from "layouts/page";
-import { useState } from "react";
+import { PageSlideFade } from "components/ui/page-transitions";
+import { repositories } from "data/repositories";
 import { TURQUOISE } from "constants/constants";
 
 const iconProps = {
@@ -49,15 +49,15 @@ export default function RepositoriesList({
     <PageLayout title="Open-source" keywords="A list of open source projects">
       <PageSlideFade>
         <VStack align="start" spacing={3}>
-          <HStack justifyContent={"space-between"} width={"100%"}>
+          <HStack justifyContent="space-between" width="100%">
             <Header underlineColor={TURQUOISE} mt={0} mb={0}>
               Open Source
             </Header>
             <HStack>
               <Tooltip hasArrow label="Live github repos" placement="top">
                 <IconButton
-                  aria-label={"live"}
-                  colorScheme={"linkedin"}
+                  aria-label="live"
+                  colorScheme="linkedin"
                   icon={<RiSignalTowerLine />}
                   isActive={activeTab === "live"}
                   onClick={() => handleClick("live")}
@@ -66,8 +66,8 @@ export default function RepositoriesList({
               </Tooltip>
               <Tooltip hasArrow label="Local github repos" placement="top">
                 <IconButton
-                  aria-label={"live"}
-                  colorScheme={"linkedin"}
+                  aria-label="live"
+                  colorScheme="linkedin"
                   icon={<RiWifiOffLine />}
                   isActive={activeTab === "offline"}
                   onClick={() => handleClick("offline")}

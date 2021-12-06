@@ -1,6 +1,7 @@
-import { Tag as ChakraTag, TagProps as ChakraTagProps } from "@chakra-ui/react";
-import { ColorKeys } from "../theme/foundations/colors";
+import type { TagProps as ChakraTagProps } from "@chakra-ui/react";
+import { Tag as ChakraTag } from "@chakra-ui/react";
 import { useTagStyles } from "hooks/use-tag-styles";
+import { ColorKeys } from "../theme/foundations/colors";
 
 export interface TagProps extends ChakraTagProps {
   name: string;

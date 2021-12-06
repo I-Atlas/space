@@ -1,10 +1,10 @@
-import { FiCheck, FiBookOpen, FiStar, FiAward } from "react-icons/fi";
 import { VStack, Heading, Box } from "@chakra-ui/react";
-import TimelineItem from "./timeline-item";
+import { FiCheck, FiStar, FiAward } from "react-icons/fi";
 import { PageSlideFade } from "components/ui/page-transitions";
-import Header from "components/layout/header";
-import InternalLink from "./internal-link";
 import { useLinkColor } from "components/ui/theme";
+import Header from "components/layout/header";
+import TimelineItem from "./timeline-item";
+import InternalLink from "./internal-link";
 
 export default function Timeline() {
   const linkColor = useLinkColor();
@@ -29,7 +29,7 @@ export default function Timeline() {
           </Box>
           <Box>
             <TimelineItem icon={FiAward} skipTrail>
-              Me and team Ødy won first place in Hackathon KTiIB
+              With my team Ødy won first place in Hackathon KTiIB
             </TimelineItem>
           </Box>
         </Box>

@@ -7,8 +7,8 @@ import {
   Image,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { CardTransition } from "components/ui/page-transitions";
 import Tags from "components/ui/tag/tags";
+import { CardTransition } from "components/ui/page-transitions";
 
 interface CardProps {
   title: string;
@@ -48,7 +48,7 @@ export default function Card({
               w={16}
               h={16}
               objectFit="cover"
-              fallbackSrc={"/assets/images/placeholder.png"}
+              fallbackSrc="/assets/images/placeholder.png"
               src={logo}
               alt={alt}
             />

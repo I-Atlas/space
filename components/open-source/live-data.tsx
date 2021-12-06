@@ -1,8 +1,8 @@
-import useFetch from "use-http";
 import { SimpleGrid, Box } from "@chakra-ui/react";
 import { PageSlideFade } from "../ui/page-transitions";
 import RepositoryCard from "./live-data-card";
 import CardSkeleton from "./card-skeleton";
+import useFetch from "use-http";
 
 interface GithubRepository {
   name: string;

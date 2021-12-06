@@ -1,3 +1,4 @@
+import NextLink from "next/link";
 import {
   Flex,
   Avatar,
@@ -10,10 +11,9 @@ import {
   ListItem,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { MotionBox, MotionFlex } from "components/ui/motion";
 import Header from "components/layout/header";
 import Projects from "components/projects/projects";
-import NextLink from "next/link";
+import { MotionBox, MotionFlex } from "components/ui/motion";
 import { useLinkColor } from "components/ui/theme";
 import { ANIMATION_DURATION, ORANGE } from "constants/constants";
 
@@ -44,8 +44,8 @@ export default function Home({ projects }: HomeProps) {
           mb={[16, 16, "auto"]}
         >
           <Avatar
-            size={"2xl"}
-            src={"https://avatars.githubusercontent.com/u/54947380?v=4"}
+            size="2xl"
+            src="https://avatars.githubusercontent.com/u/54947380?v=4"
           />
         </MotionBox>
         <MotionFlex
@@ -113,8 +113,8 @@ export default function Home({ projects }: HomeProps) {
             padding={4}
             align="start"
             borderLeft="4px solid"
-            borderColor={"#F3D448"}
-            color={"whatsapp"}
+            borderColor="#F3D448"
+            color="whatsapp"
             _hover={{ shadow: "lg" }}
             backgroundColor={useColorModeValue("gray.100", "#0a0a0a")}
             rounded="sm"
@@ -129,7 +129,7 @@ export default function Home({ projects }: HomeProps) {
             </Text>
             <UnorderedList textAlign="left" paddingLeft={5} m={0}>
               <ListItem>
-                <NextLink href={"/open-source"} passHref>
+                <NextLink href="/open-source" passHref>
                   <Link color={linkColor}>
                     Live/Local Github Repos
                     <Badge ml="1" colorScheme="yellow">
@@ -139,7 +139,7 @@ export default function Home({ projects }: HomeProps) {
                 </NextLink>
               </ListItem>
               <ListItem>
-                <NextLink href={"/tech-stack"} passHref>
+                <NextLink href="/tech-stack" passHref>
                   <Link color={linkColor}>Tech Stack</Link>
                 </NextLink>
               </ListItem>

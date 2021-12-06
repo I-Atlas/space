@@ -1,6 +1,6 @@
 import Home from "components/home/home";
-import { projects } from "data/projects";
 import PageLayout from "layouts/page";
+import { projects } from "data/projects";
 
 interface IndexProps {
   projects: Project[];

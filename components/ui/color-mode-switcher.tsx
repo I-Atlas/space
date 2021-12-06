@@ -6,8 +6,8 @@ import {
   Tooltip,
 } from "@chakra-ui/react";
 import { FaMoon, FaSun } from "react-icons/fa";
-import useSound from "use-sound";
 import { AnimatePresence } from "framer-motion";
+import useSound from "use-sound";
 import { MotionBox } from "./motion";
 
 type ColorModeSwitcherProps = Omit<IconButtonProps, "aria-label">;

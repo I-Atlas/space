@@ -1,4 +1,4 @@
-import React from "react";
+import NextLink from "next/link";
 import {
   HStack,
   VStack,
@@ -12,7 +12,6 @@ import {
 import { usePalette } from "react-palette";
 import { MotionBox } from "../ui/motion";
 import { item } from "../ui/page-transitions";
-import NextLink from "next/link";
 import { useLinkColor } from "components/ui/theme";
 
 interface SkillCardProps {

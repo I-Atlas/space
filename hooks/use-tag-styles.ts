@@ -1,18 +1,8 @@
-import {
-  TagProps as ChakraTagProps,
-  useColorModeValue,
-  useTheme,
-} from "@chakra-ui/react";
+import { useColorModeValue, useTheme } from "@chakra-ui/react";
 import {
   ColorKeys,
   getTagBackgroundDark,
 } from "components/ui/theme/foundations/colors";
-
-export interface TagProps extends ChakraTagProps {
-  name: string;
-  interactive?: boolean;
-  colorScheme?: ColorKeys;
-}
 
 export function useTagStyles(colorScheme: ColorKeys = "accent") {
   const theme = useTheme();

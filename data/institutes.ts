@@ -11,12 +11,12 @@ export const institutes: Institute[] = [
     awards: [
       {
         title: "Hackathon KTiIB",
-        description: "Me and team Ødy won first place.",
+        description: "With my team Ødy won first place in Hackathon KTiIB.",
         date: "Apr 18, 2021",
       },
       {
         title: "62nd Scientific Student Conference",
-        description: "Second place with the topic of the report - 5g networks.",
+        description: "Won second place in RSUE 62nd Scientific Student Conference.",
         date: "Apr 28, 2019",
       },
     ],

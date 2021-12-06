@@ -1,3 +1,6 @@
+import type { VFC } from "react";
+import NextLink from "next/link";
+import { useRouter } from "next/router";
 import {
   Box,
   Flex,
@@ -19,16 +22,12 @@ import {
 } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
-import ColorModeSwitcher from "components/ui/color-mode-switcher";
 import { AiTwotoneThunderbolt } from "react-icons/ai";
 import { BiChevronDown } from "react-icons/bi";
-import { BsCheckCircle } from "react-icons/bs";
-import { BsBook } from "react-icons/bs";
-import NextLink from "next/link";
-import { useRouter } from "next/router";
-import AccentPicker from "components/ui/accent-picker/accent-picker";
+import { BsCheckCircle, BsBook } from "react-icons/bs";
 import { useLinkColor } from "components/ui/theme";
-import { FC } from "react";
+import ColorModeSwitcher from "components/ui/color-mode-switcher";
+import AccentPicker from "components/ui/accent-picker/accent-picker";
 
 const webLinks = [{ name: "About", path: "/about" }];
 
@@ -52,7 +51,7 @@ interface NavLinkProps {
   onClose: () => void;
 }
 
-const NavLink: FC<NavLinkProps> = ({ name, path, onClose }) => {
+const NavLink: VFC<NavLinkProps> = ({ name, path, onClose }) => {
   const router = useRouter();
   const link = {
     bg: useColorModeValue("gray.200", "#000000"),
@@ -92,7 +91,7 @@ interface IconsObjProps {
   [key: string]: JSX.Element;
 }
 
-const MenuLink: FC<MenuLinkProps> = ({
+const MenuLink: VFC<MenuLinkProps> = ({
   name,
   path,
   color,
@@ -147,7 +146,7 @@ export default function Nav() {
           alignItems="center"
           justifyContent="space-between"
           w={["90%", "85%", "80%"]}
-          maxW={800}
+          maxW={900}
           mx="auto"
         >
           <IconButton
@@ -157,7 +156,7 @@ export default function Nav() {
             display={["inherit", "inherit", "none"]}
             onClick={isOpen ? onClose : onOpen}
           />
-          <HStack spacing={8} alignItems={"center"}>
+          <HStack spacing={8} alignItems="center">
             <Box>
               <NextLink href="/" passHref>
                 <Avatar
@@ -229,32 +228,30 @@ export default function Nav() {
           </Flex>
         </Flex>
 
-        {isOpen ? (
-          <Collapse
-            in={isOpen}
-            animateOpacity
-            style={{ marginTop: "0!important" }}
+        <Collapse
+          in={isOpen}
+          animateOpacity
+          style={{ marginTop: "0!important" }}
+        >
+          <Box
+            pb={4}
+            w={["100%", "100%", "80%"]}
+            maxW={900}
+            display={["inherit", "inherit", "none"]}
           >
-            <Box
-              pb={4}
-              w={["100%", "100%", "80%"]}
-              maxW={800}
-              display={["inherit", "inherit", "none"]}
-            >
-              <Stack as={"nav"} spacing={4}>
-                {mobileLinks.map((link, index) => (
-                  <NavLink
-                    key={index}
-                    index={index}
-                    name={link.name}
-                    path={link.path}
-                    onClose={onClose}
-                  />
-                ))}
-              </Stack>
-            </Box>
-          </Collapse>
-        ) : null}
+            <Stack as="nav" spacing={4}>
+              {mobileLinks.map((link, index) => (
+                <NavLink
+                  key={index}
+                  index={index}
+                  name={link.name}
+                  path={link.path}
+                  onClose={onClose}
+                />
+              ))}
+            </Stack>
+          </Box>
+        </Collapse>
       </Box>
     </>
   );

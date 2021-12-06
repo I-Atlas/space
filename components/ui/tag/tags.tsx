@@ -1,6 +1,7 @@
-import { Flex, FlexProps } from "@chakra-ui/react";
-import TagItem from "./tag-item";
+import type { FlexProps } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import type { TagProps } from "./tag-item";
+import TagItem from "./tag-item";
 
 export interface TagsProps extends FlexProps {
   interactive?: boolean;

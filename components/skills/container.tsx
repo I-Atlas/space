@@ -6,7 +6,7 @@ export default function Container({ ...props }) {
       textAlign="center"
       fontSize="xl"
       w={["90%", "85%", "80%"]}
-      maxW={800}
+      maxW={900}
       mx="auto"
       {...props}
     />

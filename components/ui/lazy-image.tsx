@@ -1,6 +1,6 @@
-import ProgressiveImage from "react-progressive-image";
-import { BlurhashCanvas } from "react-blurhash";
 import { Image } from "@chakra-ui/react";
+import { BlurhashCanvas } from "react-blurhash";
+import ProgressiveImage from "react-progressive-image";
 
 interface LazyImageProps {
   src: string;
