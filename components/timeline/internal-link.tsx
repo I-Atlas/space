@@ -1,5 +1,5 @@
-import { Link, LinkProps } from "@chakra-ui/react";
 import NextLink from "next/link";
+import { Link, LinkProps } from "@chakra-ui/react";
 
 interface InternalLinkProps extends LinkProps {
   url: string;

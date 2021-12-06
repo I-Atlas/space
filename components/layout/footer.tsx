@@ -25,7 +25,7 @@ export default function Footer() {
       justifyContent="space-between"
       alignItems="center"
       w={["100%", "85%", "80%"]}
-      maxW={800}
+      maxW={900}
       mx="auto"
     >
       <Flex

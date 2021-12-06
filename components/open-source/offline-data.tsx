@@ -1,8 +1,7 @@
-import React from "react";
 import { SimpleGrid } from "@chakra-ui/react";
 import { PageSlideFade, StaggerChildren } from "../ui/page-transitions";
-import RepositoryCard from "./offline-data-card";
 import { MotionBox } from "../ui/motion";
+import RepositoryCard from "./offline-data-card";
 
 interface OfflineDataProps {
   repositories: Repository[];

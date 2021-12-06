@@ -6,7 +6,6 @@ interface Project {
   desc: string;
   blurHash: string;
   technologies: string[];
-  // tech: string[];
 }
 
 interface Company {

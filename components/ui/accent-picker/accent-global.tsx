@@ -1,7 +1,7 @@
 import { useMemo } from "react";
-import { theme, ColorKeys } from "components/ui/theme";
-import { useLocalSetting } from "hooks/use-local-setting";
 import { css, Global } from "@emotion/react";
+import { useLocalSetting } from "hooks/use-local-setting";
+import { theme, ColorKeys } from "components/ui/theme";
 import { getTagBackgroundDark } from "components/ui/theme/foundations/colors";
 
 export default function AccentGlobal() {

@@ -1,9 +1,8 @@
-import React, { ReactNode } from "react";
+import type { PropsWithChildren } from "react";
 import { motion } from "framer-motion";
 import Meta from "components/layout/meta";
 
 interface PageLayoutProps {
-  children: ReactNode;
   title: string;
   description?: string;
   keywords?: string;
@@ -22,7 +21,7 @@ export default function PageLayout({
   description,
   keywords,
   image,
-}: PageLayoutProps) {
+}: PropsWithChildren<PageLayoutProps>) {
   return (
     <>
       <Meta

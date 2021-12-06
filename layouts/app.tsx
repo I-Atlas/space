@@ -1,4 +1,4 @@
-import { PropsWithChildren, ReactNode } from "react";
+import type { PropsWithChildren } from "react";
 import { Box } from "@chakra-ui/react";
 import Nav from "components/layout/nav";
 import Footer from "components/layout/footer";
@@ -11,10 +11,10 @@ export default function AppLayout({ children }: PropsWithChildren<{}>) {
         textAlign="center"
         fontSize="xl"
         w={["90%", "85%", "80%"]}
-        maxW={800}
+        maxW={900}
         mx="auto"
       >
-        <Box pt={"7rem"} pb={10}>
+        <Box pt="7rem" pb={10}>
           {children}
         </Box>
       </Box>

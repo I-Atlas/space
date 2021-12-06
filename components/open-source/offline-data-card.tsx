@@ -49,16 +49,6 @@ export default function RepositoryCard({
   const { isOpen, onOpen, onClose } = useDisclosure();
   const linkColor = useLinkColor();
 
-  const handleClick = () => {
-    onOpen();
-    // window.open(link);
-    // if (type == "link" || type == "article") {
-    //   window.open(link);
-    // } else {
-    //   onOpen();
-    // }
-  };
-
   const handleLinkClick = (
     e: React.MouseEvent<HTMLParagraphElement, MouseEvent>,
     link: string,
@@ -85,9 +75,8 @@ export default function RepositoryCard({
 
   return (
     <CardTransition>
-      <Box onClick={handleClick} cursor="pointer" size="xl">
+      <Box onClick={onOpen} cursor="pointer" size="xl">
         <VStack
-          //   w="100%"
           rounded="xl"
           borderWidth="1px"
           bg={useColorModeValue("white", "#030303")}
@@ -121,10 +110,10 @@ export default function RepositoryCard({
           </Box>
 
           <VStack py={2} px={[2, 4]} spacing={1} align="start" w="100%">
-            <Flex justifyContent={"space-between"} width="100%">
+            <Flex justifyContent="space-between" width="100%">
               <Tooltip hasArrow label="Github link" placement="top">
                 <HStack>
-                  <Icon as={FiGithub} boxSize="0.9em" mt={"1px"} />
+                  <Icon as={FiGithub} boxSize="0.9em" mt="1px" />
                   <Text
                     fontSize="sm"
                     noOfLines={1}
@@ -138,13 +127,13 @@ export default function RepositoryCard({
                 </HStack>
               </Tooltip>
               <Flex>
-                <Icon as={AiOutlineStar} boxSize="0.9em" mt={"1px"} />
+                <Icon as={AiOutlineStar} boxSize="0.9em" mt="1px" />
                 <Box as="span" ml="1" fontSize="sm">
                   {stars}
                 </Box>
               </Flex>
             </Flex>
-            <Flex justifyContent={"space-between"} width="100%">
+            <Flex justifyContent="space-between" width="100%">
               <Box>
                 <HStack spacing="1">
                   {technologies.map((tech, index) => (
@@ -161,7 +150,7 @@ export default function RepositoryCard({
         </VStack>
         <Modal isOpen={isOpen} onClose={onClose} isCentered allowPinchZoom>
           <ModalOverlay />
-          <ModalContent bg="none" maxW={"28rem"} w="auto">
+          <ModalContent bg="none" maxW="28rem" w="auto">
             <ModalBody p={0} rounded="lg" overflow="hidden" bg="none">
               <Center>
                 <Image src={cover} rounded="lg" alt="cover" />
