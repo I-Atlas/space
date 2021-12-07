@@ -78,7 +78,6 @@ export default function Card({
                   tags={skills}
                   interactive={false}
                   tagProps={{
-                    colorScheme: "red",
                     padding: "0 3px",
                     size: "sm",
                   }}

@@ -129,9 +129,9 @@ export default function Home({ projects }: HomeProps) {
             </Text>
             <UnorderedList textAlign="left" paddingLeft={5} m={0}>
               <ListItem>
-                <NextLink href="/open-source" passHref>
+                <NextLink href="/achievements" passHref>
                   <Link color={linkColor}>
-                    Live/Local Github Repos
+                    Achievements
                     <Badge ml="1" colorScheme="yellow">
                       New
                     </Badge>
@@ -139,8 +139,8 @@ export default function Home({ projects }: HomeProps) {
                 </NextLink>
               </ListItem>
               <ListItem>
-                <NextLink href="/tech-stack" passHref>
-                  <Link color={linkColor}>Tech Stack</Link>
+                <NextLink href="/open-source" passHref>
+                  <Link color={linkColor}>Live/Local Github Repos</Link>
                 </NextLink>
               </ListItem>
             </UnorderedList>
