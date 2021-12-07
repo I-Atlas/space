@@ -7,7 +7,7 @@ export const repositories: Repository[] = [
     url: "https://github.com/I-Atlas/space",
     live: "https://iliya.bolotov.space/",
     blurHash: "L34_h8~B-U%1xvtRt7f60KE1NGIo",
-    stars: "2",
+    stars: "3",
     fork: "0",
   },
   {
@@ -19,7 +19,7 @@ export const repositories: Repository[] = [
     url: "https://github.com/I-Atlas/rgx",
     live: "https://rgx.vercel.app/",
     blurHash: "L2SY{t%LRoxu~WWARjWBD+RjWBay",
-    stars: "4",
+    stars: "6",
     fork: "0",
   },
   {
@@ -38,11 +38,11 @@ export const repositories: Repository[] = [
     title: "e2ee-chat",
     description: "Chat with End-to-end encryption.",
     cover: "/assets/images/repositories/e2ee-chat.jpg",
-    technologies: ["typescript", "react", "node.js", "firebase", "e3kit"],
+    technologies: ["typescript", "react", "node.js"],
     url: "https://github.com/I-Atlas/e2ee-chat-client",
     live: "",
     blurHash: "LPQ,Xn^z~Q4xE8t2xpM~$|RlM~t3",
-    stars: "2",
+    stars: "3",
     fork: "0",
   },
   {
@@ -52,16 +52,12 @@ export const repositories: Repository[] = [
     technologies: [
       "typescript",
       "react",
-      "redux",
       "node.js",
-      "socket.io",
-      "express",
-      "mongodb",
     ],
     url: "https://github.com/I-Atlas/e2ee-chat-client",
     live: "",
     blurHash: "L4Ss8BIv0s~oO_E8rn==9cM~xr-l",
-    stars: "2",
+    stars: "3",
     fork: "0",
   },
   {
@@ -73,7 +69,7 @@ export const repositories: Repository[] = [
     url: "https://github.com/I-Atlas/sol",
     live: "https://discordapp.com/api/oauth2/authorize?client_id=696105849340297246&permissions=8&scope=bot",
     blurHash: "L4Ss8BIv0s~oO_E8rn==9cM~xr-l",
-    stars: "4",
+    stars: "5",
     fork: "0",
   },
 ];

@@ -44,7 +44,7 @@ export default function Timeline() {
           </Box>
           <Box>
             <TimelineItem icon={FiStar} skipTrail>
-              With the Minecord bot entered the top 100 bots of{" "}
+              With the Minecord project entered the top 100 bots of{" "}
               <InternalLink
                 color={linkColor}
                 url="https://top.gg/"
@@ -58,10 +58,21 @@ export default function Timeline() {
           <Heading fontSize="2xl" fontWeight="600" my={5}>
             2019
           </Heading>
-
           <Box>
             <TimelineItem icon={FiCheck}>
               Passed Bioinformatics Institute Python Certification
+            </TimelineItem>
+          </Box>
+          <Box>
+            <TimelineItem icon={FiStar}>
+              With the Discordtip project entered the trend bots of{" "}
+              <InternalLink
+                color={linkColor}
+                url="https://top.gg/"
+                text={"top.gg"}
+                target="_blank"
+              />{" "}
+              several times and received a lot of positive feedback
             </TimelineItem>
           </Box>
           <Box>

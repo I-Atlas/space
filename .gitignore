@@ -35,3 +35,7 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# next-pwa
+**/public/workbox**
+**/public/sw**

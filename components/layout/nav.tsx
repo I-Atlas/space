@@ -162,15 +162,12 @@ export default function Nav() {
                 <Avatar
                   as={Link}
                   size="sm"
+                  // border={router.pathname !== "/" ? "1px solid red" : undefined}
                   src="https://avatars.githubusercontent.com/u/54947380?v=4"
                 />
               </NextLink>
             </Box>
-            <HStack
-              as={"nav"}
-              spacing={4}
-              display={{ base: "none", md: "flex" }}
-            >
+            <HStack as="nav" spacing={4} display={{ base: "none", md: "flex" }}>
               {webLinks.map((link, index) => (
                 <NavLink
                   key={index}
@@ -216,7 +213,7 @@ export default function Nav() {
               </Menu>
             </HStack>
           </HStack>
-          <Flex alignItems={"center"}>
+          <Flex alignItems="center">
             <AccentPicker
               aria-label="Accent Color Picker"
               variant="ghost"

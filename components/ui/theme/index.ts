@@ -176,16 +176,18 @@ export const extendedTheme = extendTheme({
 
 export const getTagColor = (type: string) => {
   type = type.toLowerCase();
-  if (type === "rails" || type === "ruby") {
-    return "red";
-  } else if (type === "react") {
+  if (type === "react" || type === "react-native" || type === "python") {
     return "cyan";
   } else if (type === "javascript") {
     return "yellow";
-  } else if (type === "typescript" || type === "tailwindcss") {
+  } else if (type === "typescript") {
     return "blue";
-  } else if (type === "chakraui" || type === "css") {
-    return "teal";
+  } else if (type === "next.js") {
+    return "gray";
+  } else if (type === "node.js") {
+    return "green";
+  } else {
+    return "accent";
   }
 };
 

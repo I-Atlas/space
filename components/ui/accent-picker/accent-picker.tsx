@@ -5,16 +5,23 @@ import { ColorKeys, accentKeys } from "components/ui/theme";
 import { useLocalSetting } from "hooks/use-local-setting";
 import { MotionBox } from "../motion";
 import AccentPickerIcon from "./accent-picker-icon";
+import useSound from "use-sound";
 
 export default function AccentPicker({ ...props }: IconButtonProps) {
   const [key, setAccentKey] = useLocalSetting<ColorKeys>("accent", "red");
+  const [play] = useSound("/assets/audios/lightswitch.mp3", {
+    volume: 0.05,
+    sprite: {
+      on: [0, 100],
+    },
+  });
 
   const update = useCallback(() => {
     let index = accentKeys.indexOf(key);
     index = (index + 1) % accentKeys.length;
     setAccentKey(accentKeys[index]);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [key]);
+    play({ id: "on" });
+  }, [key, play, setAccentKey]);
 
   return (
     <AnimatePresence exitBeforeEnter initial={false}>
