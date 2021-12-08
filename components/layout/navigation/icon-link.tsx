@@ -1,9 +1,9 @@
 import type { VFC } from "react";
 import NextLink from "next/link";
 import { IconButton, Icon } from "@chakra-ui/react";
-import { AiTwotoneThunderbolt, AiFillBook, AiFillHome } from "react-icons/ai";
-import { GiAchievement } from "react-icons/gi";
+import { AiFillThunderbolt, AiFillBook, AiFillHome } from "react-icons/ai";
 import { ImBriefcase } from "react-icons/im";
+import { BsAwardFill } from "react-icons/bs";
 
 interface IconLinkProps {
   name: string;
@@ -18,11 +18,41 @@ interface IconsObjProps {
 
 export const IconLink: VFC<IconLinkProps> = ({ name, path, color, rPath }) => {
   const iconsObj: IconsObjProps = {
-    "/": <Icon as={AiFillHome} size={18} color={rPath === path ? color : undefined} />,
-    "/about": <Icon as={ImBriefcase} size={18} color={rPath === path ? color : undefined} />,
-    "/tech-stack": <Icon as={AiTwotoneThunderbolt} size={18} color={rPath === path ? color : undefined} />,
-    "/open-source": <Icon as={AiFillBook} size={18} color={rPath === path ? color : undefined} />,
-    "/achievements": <Icon as={GiAchievement} size={18} color={rPath === path ? color : undefined} />,
+    "/": (
+      <Icon
+        as={AiFillHome}
+        w={5} h={5}
+        color={rPath === path ? color : undefined}
+      />
+    ),
+    "/about": (
+      <Icon
+        as={ImBriefcase}
+        w={5} h={5}
+        color={rPath === path ? color : undefined}
+      />
+    ),
+    "/tech-stack": (
+      <Icon
+        as={AiFillThunderbolt}
+        w={5} h={5}
+        color={rPath === path ? color : undefined}
+      />
+    ),
+    "/open-source": (
+      <Icon
+        as={AiFillBook}
+        w={5} h={5}
+        color={rPath === path ? color : undefined}
+      />
+    ),
+    "/achievements": (
+      <Icon
+        as={BsAwardFill}
+        w={5} h={5}
+        color={rPath === path ? color : undefined}
+      />
+    ),
   };
 
   return (

@@ -1,5 +1,5 @@
 import { FaGithub, FaLinkedin, FaTelegram } from "react-icons/fa";
-import { FiMail } from "react-icons/fi";
+import { SiGmail } from "react-icons/si";
 
 export const configs = {
   copyright: `Copyright © ${new Date().getFullYear()} Iliya Bolotov. All Rights Reserved.`,
@@ -28,7 +28,7 @@ export const configs = {
         url: "mailto:bolotov.iliya.w@gmail.com",
         label: "Mail Iliya",
         type: "gray",
-        icon: <FiMail />,
+        icon: <SiGmail />,
       },
     ],
   },

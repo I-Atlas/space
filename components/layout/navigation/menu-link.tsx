@@ -1,8 +1,8 @@
 import type { VFC } from "react";
 import NextLink from "next/link";
 import { HStack, Text, Link, MenuItem, Icon } from "@chakra-ui/react";
-import { AiTwotoneThunderbolt, AiFillBook } from "react-icons/ai";
-import { GiAchievement } from "react-icons/gi";
+import { AiFillThunderbolt, AiFillBook } from "react-icons/ai";
+import { BsAwardFill } from "react-icons/bs";
 
 interface MenuLinkProps {
   name: string;
@@ -28,7 +28,7 @@ export const MenuLink: VFC<MenuLinkProps> = ({
   const iconsObj: IconsObjProps = {
     "/tech-stack": (
       <Icon
-        as={AiTwotoneThunderbolt}
+        as={AiFillThunderbolt}
         size={18}
         color={rPath === path ? color : undefined}
       />
@@ -42,7 +42,7 @@ export const MenuLink: VFC<MenuLinkProps> = ({
     ),
     "/achievements": (
       <Icon
-        as={GiAchievement}
+        as={BsAwardFill}
         size={18}
         color={rPath === path ? color : undefined}
       />
