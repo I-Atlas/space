@@ -76,6 +76,7 @@ export default function ProjectCard({
                 <HStack spacing="1">
                   {technologies.map((tech, index) => (
                     <TagItem
+                      display={["none", "inline-flex", "inline-flex"]}
                       key={index}
                       name={tech}
                       mt="1px"
