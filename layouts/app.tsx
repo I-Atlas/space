@@ -1,12 +1,13 @@
 import type { PropsWithChildren } from "react";
 import { Box } from "@chakra-ui/react";
-import Nav from "components/layout/nav";
 import Footer from "components/layout/footer";
+import TopNavigation from "components/layout/navigation/top-navigation";
+import BottomNavigation from "components/layout/navigation/bottom-navigation";
 
 export default function AppLayout({ children }: PropsWithChildren<{}>) {
   return (
     <>
-      <Nav />
+      <TopNavigation />
       <Box
         textAlign="center"
         fontSize="xl"
@@ -18,6 +19,7 @@ export default function AppLayout({ children }: PropsWithChildren<{}>) {
           {children}
         </Box>
       </Box>
+      <BottomNavigation />
       <Footer />
     </>
   );

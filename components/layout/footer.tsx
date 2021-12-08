@@ -34,6 +34,7 @@ export default function Footer() {
         justifyContent={["center", "space-between"]}
         alignItems="center"
         w="100%"
+        pb={["7rem", "7rem", "0rem"]}
       >
         <Text
           textAlign="center"
