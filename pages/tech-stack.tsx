@@ -12,9 +12,8 @@ import {
   useColorModeValue,
   SimpleGrid,
 } from "@chakra-ui/react";
-import { AiTwotoneThunderbolt, AiOutlineCloudServer } from "react-icons/ai";
-import { BiDesktop } from "react-icons/bi";
-import { GiSpiderWeb } from "react-icons/gi";
+import { AiFillThunderbolt } from "react-icons/ai";
+import { MdDesignServices, MdDesktopMac, MdCloud } from "react-icons/md";
 import SkillCard from "components/skills/skill-card";
 import Section from "components/skills/section";
 import Header from "components/layout/header";
@@ -84,7 +83,7 @@ export default function TechStack({ skills }: TechStackProps) {
                   onClick={() => filterSkills("")}
                 >
                   <HStack spacing={1}>
-                    <Icon as={AiTwotoneThunderbolt} />
+                    <Icon as={AiFillThunderbolt} />
                     <Text>All</Text>
                   </HStack>
                 </Tab>
@@ -101,8 +100,8 @@ export default function TechStack({ skills }: TechStackProps) {
                   onClick={() => filterSkills("development")}
                 >
                   <HStack spacing={1}>
-                    <Icon as={BiDesktop} />
-                    <Text>Web Development</Text>
+                    <Icon as={MdDesktopMac} />
+                    <Text>Development</Text>
                   </HStack>
                 </Tab>
                 <Tab
@@ -118,7 +117,7 @@ export default function TechStack({ skills }: TechStackProps) {
                   onClick={() => filterSkills("design")}
                 >
                   <HStack spacing={1}>
-                    <Icon as={GiSpiderWeb} />
+                    <Icon as={MdDesignServices} />
                     <Text>Web Design</Text>
                   </HStack>
                 </Tab>
@@ -135,7 +134,7 @@ export default function TechStack({ skills }: TechStackProps) {
                   onClick={() => filterSkills("devops")}
                 >
                   <HStack spacing={1}>
-                    <Icon as={AiOutlineCloudServer} />
+                    <Icon as={MdCloud} />
                     <Text>Devops</Text>
                   </HStack>
                 </Tab>
