@@ -53,4 +53,5 @@ interface Skill {
   link: string;
   type: string;
   image: string;
+  lightVibrant: string;
 }
