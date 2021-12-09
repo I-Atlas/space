@@ -7,9 +7,7 @@ import {
   Box,
   Link,
   Image,
-  Skeleton,
 } from "@chakra-ui/react";
-import { usePalette } from "react-palette";
 import { MotionBox } from "../ui/motion";
 import { item } from "../ui/page-transitions";
 import { useLinkColor } from "components/ui/theme";
@@ -19,6 +17,7 @@ interface SkillCardProps {
   image: string;
   link: string;
   description: string;
+  lightVibrant: string;
 }
 
 export default function SkillCard({
@@ -26,9 +25,11 @@ export default function SkillCard({
   image,
   link,
   description,
+  lightVibrant,
 }: SkillCardProps) {
   const linkColor = useLinkColor();
-  const { data, loading } = usePalette(image);
+  // Removed usePalette beacause perfomance drops
+  // const { data, loading } = usePalette(image);
 
   return (
     <MotionBox variants={item}>
@@ -56,7 +57,7 @@ export default function SkillCard({
                 boxShadow="inset 0 0 1px 1px rgba(0, 0, 0, 0.015)"
               >
                 <Box
-                  bg={data.lightVibrant}
+                  bg={lightVibrant}
                   position="absolute"
                   top={0}
                   bottom={0}
@@ -64,18 +65,14 @@ export default function SkillCard({
                   right={0}
                   opacity={0.25}
                 ></Box>
-                {loading ? (
-                  <Skeleton height={26} width={26} rounded="md" />
-                ) : (
-                  <Image
-                    src={image}
-                    height={26}
-                    width={26}
-                    layout="fixed"
-                    rounded="md"
-                    alt="skill"
-                  />
-                )}
+                <Image
+                  src={image}
+                  height={26}
+                  width={26}
+                  layout="fixed"
+                  rounded="md"
+                  alt="skill"
+                />
               </Box>
               <VStack
                 align="start"

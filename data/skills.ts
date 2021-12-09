@@ -5,6 +5,7 @@ export const skills: Skill[] = [
     link: "https://www.python.org/",
     type: "development",
     image: "/assets/images/skills/python.svg",
+    lightVibrant: "#fcdf7c",
   },
   {
     name: "JavaScript",
@@ -12,6 +13,7 @@ export const skills: Skill[] = [
     link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
     type: "development",
     image: "/assets/images/skills/javascript.svg",
+    lightVibrant: "#fde87b",
   },
   {
     name: "TypeScript",
@@ -19,6 +21,7 @@ export const skills: Skill[] = [
     link: "https://www.typescriptlang.org/",
     type: "development",
     image: "/assets/images/skills/typescript.svg",
+    lightVibrant: "#8cbcec",
   },
 
   {
@@ -27,6 +30,7 @@ export const skills: Skill[] = [
     link: "https://reactjs.org/",
     type: "development",
     image: "/assets/images/skills/react.svg",
+    lightVibrant: "#84dcec",
   },
   {
     name: "Next.js",
@@ -34,6 +38,7 @@ export const skills: Skill[] = [
     link: "https://nextjs.org/",
     type: "development",
     image: "/assets/images/skills/nextjs.svg",
+    lightVibrant: "#bcbcbc",
   },
   {
     name: "React Native",
@@ -41,6 +46,7 @@ export const skills: Skill[] = [
     link: "https://reactnative.dev/",
     type: "development",
     image: "/assets/images/skills/react.svg",
+    lightVibrant: "#84dcec",
   },
   {
     name: "Node.js",
@@ -48,6 +54,7 @@ export const skills: Skill[] = [
     link: "https://nodejs.org/",
     type: "development",
     image: "/assets/images/skills/nodejs.svg",
+    lightVibrant: "#a3d6a3",
   },
   {
     name: "NestJS",
@@ -55,6 +62,7 @@ export const skills: Skill[] = [
     link: "https://nestjs.com/",
     type: "development",
     image: "/assets/images/skills/nestjs.svg",
+    lightVibrant: "#f0889e",
   },
   {
     name: "PostgreSQL",
@@ -62,6 +70,7 @@ export const skills: Skill[] = [
     link: "https://www.postgresql.org/",
     type: "database",
     image: "/assets/images/skills/postgresql.svg",
+    lightVibrant: "#94c4e4",
   },
   {
     name: "MongoDB",
@@ -69,6 +78,7 @@ export const skills: Skill[] = [
     link: "https://www.mongodb.com/",
     type: "database",
     image: "/assets/images/skills/mongodb.svg",
+    lightVibrant: "#80c484",
   },
 
   {
@@ -77,6 +87,7 @@ export const skills: Skill[] = [
     link: "https://aws.amazon.com/",
     type: "devops",
     image: "assets/images/skills/amazon-web-services.svg",
+    lightVibrant: "#fdcb7b",
   },
   {
     name: "Firebase",
@@ -84,6 +95,7 @@ export const skills: Skill[] = [
     link: "https://firebase.google.com/",
     type: "devops",
     image: "/assets/images/skills/firebase.svg",
+    lightVibrant: "#fccc2b",
   },
   {
     name: "Azure",
@@ -91,6 +103,7 @@ export const skills: Skill[] = [
     link: "https://azure.microsoft.com/",
     type: "devops",
     image: "/assets/images/skills/azure.svg",
+    lightVibrant: "#fccc2b",
   },
   {
     name: "Nginx",
@@ -98,6 +111,7 @@ export const skills: Skill[] = [
     link: "https://www.nginx.com/",
     type: "devops",
     image: "/assets/images/skills/nginx.svg",
+    lightVibrant: "#a4d4a4",
   },
   {
     name: "Docker",
@@ -105,6 +119,7 @@ export const skills: Skill[] = [
     link: "https://www.docker.com/",
     type: "devops",
     image: "/assets/images/skills/docker.svg",
+    lightVibrant: "#6cc4ec",
   },
   {
     name: "Git",
@@ -112,6 +127,7 @@ export const skills: Skill[] = [
     link: "https://git-scm.com/",
     type: "devops",
     image: "/assets/images/skills/git.svg",
+    lightVibrant: "#f89f80",
   },
   {
     name: "HTML",
@@ -119,6 +135,7 @@ export const skills: Skill[] = [
     link: "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5",
     type: "design",
     image: "/assets/images/skills/html.svg",
+    lightVibrant: "#fcb47c",
   },
   {
     name: "CSS",
@@ -126,6 +143,7 @@ export const skills: Skill[] = [
     link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
     type: "design",
     image: "/assets/images/skills/css.svg",
+    lightVibrant: "#88caf0",
   },
   {
     name: "Figma",
@@ -133,5 +151,6 @@ export const skills: Skill[] = [
     link: "https://www.figma.com/",
     type: "design",
     image: "/assets/images/skills/figma.svg",
+    lightVibrant: "#7c4cfc",
   },
 ];

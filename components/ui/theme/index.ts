@@ -32,6 +32,7 @@ export const extendedTheme = extendTheme({
           color: "#b5f4a5 !important",
           fontStyle: "normal !important",
         },
+        "-webkit-tap-highlight-color": "transparent",
       },
       a: {
         color: mode("accent.500", "accent.200")(props),
