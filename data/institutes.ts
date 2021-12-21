@@ -1,8 +1,7 @@
 export const institutes: Institute[] = [
   {
     short_title: "RSUE",
-    title:
-      'TGPI (branch) "Rostov State University Of Economics"',
+    title: "Rostov State University Of Economics",
     alt: "rsue",
     role: "Bachelor's Degree in Computer Science",
     skills: ["computer science", "management", "ui/ux design"],
