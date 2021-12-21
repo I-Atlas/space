@@ -18,7 +18,6 @@
     "paths": {
       "*": ["/*"],
       "components/*": ["components/*"],
-      "elements/*": ["elements/*"],
       "layouts/*": ["layouts/*"],
       "data/*": ["data/*"],
       "pages/*": ["pages/*"],
