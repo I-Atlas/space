@@ -4,6 +4,7 @@ const runtimeCaching = require("next-pwa/cache");
 /** @type {import('next').NextConfig} */
 module.exports = withPWA({
   reactStrictMode: true,
+  swcMinify: true,
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback.fs = false;

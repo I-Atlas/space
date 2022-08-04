@@ -1,16 +1,24 @@
 export const companies: Company[] = [
   {
+    title: "trember GmbH",
+    alt: "trember",
+    role: "Software Consultant & Full-Stack Engineer",
+    skills: ["typescript", "react", "node.js"],
+    period: "Febuary 2022 - Present",
+    logo: "/assets/images/companies/trember.jpg",
+  },
+  {
     title: "Umbrella IT",
     alt: "umbrellait",
     role: "Software Engineer",
     skills: ["typescript", "react", "node.js"],
-    period: "November 2020 - Present",
+    period: "November 2020 - Febuary 2022",
     logo: "/assets/images/companies/umbrellait.jpg",
   },
   {
     title: "Ultrasenses",
     alt: "ultrasenses",
-    role: "Co-founder",
+    role: "Co-Founder",
     skills: ["management", "ui/ux design", "architect"],
     period: "August 2021 - Present",
     logo: "/assets/images/companies/ultrasenses.jpg",
