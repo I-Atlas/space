@@ -1,6 +1,4 @@
-import { Image } from "@chakra-ui/react";
-import { BlurhashCanvas } from "react-blurhash";
-import ProgressiveImage from "react-progressive-image";
+import Image, { ImageProps } from "next/image";
 
 interface LazyImageProps {
   src: string;
@@ -8,8 +6,9 @@ interface LazyImageProps {
   size?: string;
   width?: number;
   height?: number;
-  layout?: string;
-  rounded?: string;
+  layout?: "fill" | "fixed" | "intrinsic" | "responsive";
+  rounded?: number;
+  fit?: ImageProps["objectFit"];
 }
 
 export default function LazyImage({
@@ -20,34 +19,20 @@ export default function LazyImage({
   height,
   layout,
   rounded,
+  fit,
 }: LazyImageProps) {
-  const placeholder = "/assets/images/placeholder.png";
-
   return (
-    <ProgressiveImage delay={500} src={src} placeholder={placeholder}>
-      {(src: string, loading: boolean) => {
-        return loading ? (
-          <BlurhashCanvas
-            hash={blurHash}
-            width={width}
-            height={height}
-            punch={1}
-            style={{ borderRadius: rounded ? "5px" : "" }}
-          />
-        ) : (
-          <Image
-            src={src}
-            objectFit="cover"
-            alt="cover image"
-            width={width}
-            height={height}
-            size={size}
-            layout={layout}
-            rounded={rounded}
-            fallbackSrc={placeholder}
-          />
-        );
-      }}
-    </ProgressiveImage>
+    <Image
+      src={src}
+      sizes={size}
+      width={width}
+      height={height}
+      blurDataURL={blurHash}
+      placeholder="blur"
+      layout={layout}
+      alt={`lazy-image-${blurHash}`}
+      style={{ borderRadius: `${rounded}px` }}
+      objectFit={fit}
+    />
   );
 }

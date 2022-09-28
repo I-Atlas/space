@@ -9,7 +9,7 @@ export const projects: Project[] = [
     technologies: ["typescript", "react", "node.js"],
   },
   {
-    id: 1,
+    id: 2,
     title: "BCS Bank",
     logo: "/assets/images/projects/bcs.svg",
     blurHash: "AfMuFp%J~Ss.",
@@ -18,8 +18,8 @@ export const projects: Project[] = [
     technologies: ["typescript", "react", "node.js"],
   },
   {
-    id: 2,
-    title: "BCS Invest World",
+    id: 3,
+    title: "BCS Investment World",
     link: "https://lk.bcs.ru/",
     logo: "/assets/images/projects/bcs.svg",
     blurHash: "AfMuFp%J~Ss.",
@@ -27,7 +27,7 @@ export const projects: Project[] = [
     technologies: ["typescript", "react", "node.js"],
   },
   {
-    id: 3,
+    id: 4,
     title: "MyDoc",
     link: "",
     logo: "/assets/images/projects/mydoc.svg",

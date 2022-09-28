@@ -75,7 +75,7 @@ export default function RepositoryCard({
 
   return (
     <CardTransition>
-      <Box onClick={onOpen} cursor="pointer" size="xl">
+      <Box onClick={onOpen} cursor="pointer" width="100%">
         <VStack
           rounded="xl"
           borderWidth="1px"
@@ -103,7 +103,7 @@ export default function RepositoryCard({
                   borderBottomWidth="1px"
                   borderColor={useColorModeValue("gray.100", "#0a0a0a")}
                 >
-                  <LazyImage src={cover} blurHash={blurHash} />
+                  <LazyImage src={cover} blurHash={blurHash} layout="fill" fit="cover" />
                 </AspectRatio>
               </MotionBox>
             </MotionBox>

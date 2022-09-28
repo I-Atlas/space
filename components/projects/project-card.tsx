@@ -5,10 +5,10 @@ import {
   Text,
   useColorModeValue,
   Link,
+  Image,
 } from "@chakra-ui/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLinkColor } from "components/ui/theme";
-import LazyImage from "components/ui/lazy-image";
 import TagItem from "components/ui/tag/tag-item";
 
 interface ProjectCardProps {
@@ -48,14 +48,12 @@ export default function ProjectCard({
         cursor="pointer"
         _hover={{ shadow: "lg" }}
       >
-        <LazyImage
+        <Image
           src={logo}
-          blurHash={blurHash}
-          size="sm"
           width={33}
           height={33}
-          layout="fixed"
           rounded="md"
+          alt="project-card"
         />
         <VStack align="start" justify="flex-start">
           <VStack spacing={0} align="start">
