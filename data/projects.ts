@@ -1,6 +1,15 @@
 export const projects: Project[] = [
   {
     id: 1,
+    title: "trember",
+    logo: "/assets/images/projects/trember.svg",
+    blurHash: "KgI?c*Dk_KN7KHoY,_bq=|",
+    link: "https://www.trember.com/",
+    desc: `trember is a digital event platform that bridges digital and real events and creates an event multiverse that allows guests to participate, connect and engage equally from online and offline. Made in Germany - DGSVO compliant`,
+    technologies: ["typescript", "react", "node.js"],
+  },
+  {
+    id: 1,
     title: "BCS Bank",
     logo: "/assets/images/projects/bcs.svg",
     blurHash: "AfMuFp%J~Ss.",

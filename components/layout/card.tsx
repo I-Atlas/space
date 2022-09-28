@@ -54,14 +54,14 @@ export default function Card({
             />
             <Stack spacing={2} pl={3} align="left">
               <Heading
-                align="left"
+                textAlign="left"
                 fontSize="xl"
                 color={`mode.${colorMode}.career.text`}
               >
                 {title}
               </Heading>
               <Heading
-                align="left"
+                textAlign="left"
                 fontSize="sm"
                 color={`mode.${colorMode}.career.subtext`}
               >

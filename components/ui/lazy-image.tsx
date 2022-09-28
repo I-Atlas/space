@@ -5,20 +5,16 @@ import ProgressiveImage from "react-progressive-image";
 interface LazyImageProps {
   src: string;
   blurHash: string;
-  size?: string;
   width?: number;
   height?: number;
-  layout?: string;
   rounded?: string;
 }
 
 export default function LazyImage({
   src,
   blurHash,
-  size,
   width,
   height,
-  layout,
   rounded,
 }: LazyImageProps) {
   const placeholder = "/assets/images/placeholder.png";
@@ -32,7 +28,7 @@ export default function LazyImage({
             width={width}
             height={height}
             punch={1}
-            style={{ borderRadius: rounded ? "5px" : "" }}
+            style={{ borderRadius: rounded ? "50px" : "" }}
           />
         ) : (
           <Image
@@ -41,8 +37,6 @@ export default function LazyImage({
             alt="cover image"
             width={width}
             height={height}
-            size={size}
-            layout={layout}
             rounded={rounded}
             fallbackSrc={placeholder}
           />

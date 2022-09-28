@@ -69,7 +69,6 @@ export default function SkillCard({
                   src={image}
                   height={26}
                   width={26}
-                  layout="fixed"
                   rounded="md"
                   alt="skill"
                 />

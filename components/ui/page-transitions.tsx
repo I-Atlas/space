@@ -1,4 +1,4 @@
-import type { FC } from "react";
+import type { FC, ReactNode } from "react";
 import { SlideFade } from "@chakra-ui/react";
 import { MotionBox } from "./motion";
 
@@ -82,11 +82,11 @@ export const item = {
   },
 };
 
-export const PageSlideFade: FC = ({ children }) => {
+export const PageSlideFade: FC<{ children: ReactNode }> = ({ children }) => {
   return <SlideFade in>{children}</SlideFade>;
 };
 
-export const StaggerChildren: FC = ({ children }) => {
+export const StaggerChildren: FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <MotionBox
       animate={{
@@ -100,6 +100,6 @@ export const StaggerChildren: FC = ({ children }) => {
   );
 };
 
-export const CardTransition: FC = ({ children }) => {
+export const CardTransition: FC<{ children: ReactNode }> = ({ children }) => {
   return <MotionBox variants={variants}>{children}</MotionBox>;
 };

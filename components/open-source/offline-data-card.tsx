@@ -75,7 +75,7 @@ export default function RepositoryCard({
 
   return (
     <CardTransition>
-      <Box onClick={onOpen} cursor="pointer" size="xl">
+      <Box onClick={onOpen} cursor="pointer">
         <VStack
           rounded="xl"
           borderWidth="1px"

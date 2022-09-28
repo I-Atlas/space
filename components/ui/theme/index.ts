@@ -177,16 +177,23 @@ export const extendedTheme = extendTheme({
 
 export const getTagColor = (type: string) => {
   type = type.toLowerCase();
-  if (type === "react" || type === "react-native" || type === "python") {
+  if (
+    type === "react" ||
+    type === "react-native" ||
+    type === "python" ||
+    type === "dart"
+  ) {
     return "cyan";
   } else if (type === "javascript") {
     return "yellow";
-  } else if (type === "typescript") {
+  } else if (type === "typescript" || type === "flutter") {
     return "blue";
   } else if (type === "next.js") {
     return "gray";
   } else if (type === "node.js") {
     return "green";
+  } else if (type === "computer science") {
+    return "purple";
   } else {
     return "accent";
   }
