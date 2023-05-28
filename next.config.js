@@ -8,7 +8,7 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 });
 /** @type {import("next").NextConfig} */
 const nextConfig = {
-  reactStrictMode: false, // false because of google-map-react
+  reactStrictMode: true,
   swcMinify: true,
   images: {
     loader: "default",
@@ -21,6 +21,7 @@ const nextConfig = {
     GITHUB_API_URL: process.env.GITHUB_API_URL,
     APP_URL: process.env.APP_URL,
     GA_ID: process.env.GA_ID,
+    YM_ID: process.env.YM_ID,
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {

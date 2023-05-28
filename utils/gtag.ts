@@ -2,6 +2,7 @@
 import * as process from "process";
 
 export const pageview = (url: string) => {
+  //@ts-ignore
   window.gtag("config", process.env.GA_ID, {
     page_path: url,
   });
