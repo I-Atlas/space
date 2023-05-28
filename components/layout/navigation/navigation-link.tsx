@@ -1,7 +1,7 @@
 import type { VFC } from "react";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
-import { Link, useColorModeValue } from "@chakra-ui/react";
+import { Text, useColorModeValue } from "@chakra-ui/react";
 
 interface NavigationLinkProps {
   index?: number;
@@ -23,7 +23,7 @@ export const NavigationLink: VFC<NavigationLinkProps> = ({
 
   return (
     <NextLink href={path} passHref>
-      <Link
+      <Text
         px={2}
         py={1}
         rounded={"md"}
@@ -36,7 +36,7 @@ export const NavigationLink: VFC<NavigationLinkProps> = ({
         onClick={() => onClose()}
       >
         {name}
-      </Link>
+      </Text>
     </NextLink>
   );
 };

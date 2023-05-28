@@ -1,7 +1,7 @@
 import { Box, Heading, VStack } from "@chakra-ui/react";
 import { FiAward, FiCheck, FiStar } from "react-icons/fi";
 import { PageSlideFade } from "components/ui/page-transitions";
-import { useLinkColor } from "styles/index";
+import { useLinkColor } from "styles/theme";
 import Header from "components/layout/header";
 import TimelineItem from "./timeline-item";
 import InternalLink from "./internal-link";
@@ -17,13 +17,14 @@ export default function Timeline() {
         </Header>
       </Box>
       <VStack textAlign="start" align="start" mb={5}>
-      <Box>
+        <Box>
           <Heading fontSize="2xl" fontWeight="600" my={5}>
             2022
           </Heading>
           <Box>
             <TimelineItem icon={FiAward} skipTrail>
-              With my team KISS won first place in Hackathon Cybersecurity of citizens
+              With my team KISS won first place in Hackathon Cybersecurity of
+              citizens
             </TimelineItem>
           </Box>
         </Box>

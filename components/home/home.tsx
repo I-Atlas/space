@@ -1,9 +1,8 @@
-import NextLink from "next/link";
 import {
   Avatar,
+  Badge,
   Box,
   Flex,
-  Link,
   ListItem,
   Stack,
   Text,
@@ -13,8 +12,9 @@ import {
 import Header from "components/layout/header";
 import Projects from "components/projects/projects";
 import { MotionBox, MotionFlex } from "styles/motion";
-import { useLinkColor } from "styles/index";
+import { useLinkColor } from "styles/theme";
 import { ANIMATION_DURATION, ORANGE } from "config/constants";
+import NextLink from "next/link";
 
 interface HomeProps {
   projects: Project[];
@@ -129,17 +129,17 @@ export default function Home({ projects }: HomeProps) {
             <UnorderedList textAlign="left" paddingLeft={5} m={0}>
               <ListItem>
                 <NextLink href="/achievements" passHref>
-                  <Link color={linkColor}>
+                  <Text color={linkColor}>
                     Achievements
-                    {/*<Badge ml="1" colorScheme="yellow">*/}
-                    {/*  New*/}
-                    {/*</Badge>*/}
-                  </Link>
+                    <Badge ml="1" colorScheme="yellow">
+                      New
+                    </Badge>
+                  </Text>
                 </NextLink>
               </ListItem>
               <ListItem>
                 <NextLink href="/open-source" passHref>
-                  <Link color={linkColor}>Live/Local Github Repos</Link>
+                  <Text color={linkColor}>Live/Local Github Repos</Text>
                 </NextLink>
               </ListItem>
             </UnorderedList>

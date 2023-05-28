@@ -18,7 +18,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { MotionBox } from "styles/motion";
-import { getTagColor, useLinkColor } from "styles/index";
+import { getTagColor, useLinkColor } from "styles/theme";
 import { AiOutlineStar } from "react-icons/ai";
 import { FiGithub } from "react-icons/fi";
 import { CardTransition } from "../ui/page-transitions";

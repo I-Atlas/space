@@ -7,6 +7,7 @@ import Header from "components/layout/header";
 import PageLayout from "layouts/page";
 import Card from "components/layout/card";
 import { TURQUOISE } from "config/constants";
+import AboutImage from "public/assets/images/screenshots/about.png";
 
 interface AboutProps {
   companies: Company[];
@@ -18,7 +19,8 @@ export default function Career({ companies, institutes }: AboutProps) {
 
   return (
     <PageLayout
-      title="About"
+      image={AboutImage.src}
+      title="Career"
       description="My educational and professional journey so far"
     >
       <PageSlideFade>

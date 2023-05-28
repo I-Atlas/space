@@ -6,7 +6,7 @@ import {
   useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
-import { useLinkColor } from "styles/index";
+import { useLinkColor } from "styles/theme";
 import ColorModeSwitcher from "components/ui/color-mode-switcher";
 import AccentPicker from "components/ui/accent-picker/accent-picker";
 import { NavigationLink } from "./navigation-link";
@@ -45,7 +45,6 @@ export default function TopNavigation() {
         maxW={900}
         mx="auto"
       >
-        <Box></Box>
         <HStack as="nav" spacing={4} display={{ base: "none", md: "flex" }}>
           {webLinks.map((link, index) => (
             <NavigationLink

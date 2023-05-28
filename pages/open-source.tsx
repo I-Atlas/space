@@ -16,6 +16,7 @@ import PageLayout from "layouts/page";
 import { PageSlideFade } from "components/ui/page-transitions";
 import { repositories } from "data/repositories";
 import { TURQUOISE } from "config/constants";
+import OpenSourceImage from "public/assets/images/screenshots/open-source.png";
 
 const iconProps = {
   variant: "ghost",
@@ -46,7 +47,11 @@ export default function RepositoriesList({
   };
 
   return (
-    <PageLayout title="Open-source" keywords="A list of open source projects">
+    <PageLayout
+      image={OpenSourceImage.src}
+      title="Open-source"
+      keywords="A list of open source projects"
+    >
       <PageSlideFade>
         <VStack align="start" spacing={3}>
           <HStack justifyContent="space-between" width="100%">

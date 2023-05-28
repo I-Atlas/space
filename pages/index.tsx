@@ -1,6 +1,7 @@
 import Home from "components/home/home";
 import PageLayout from "layouts/page";
 import { projects } from "data/projects";
+import IndexImage from "public/assets/images/screenshots/index.png";
 
 interface IndexProps {
   projects: Project[];
@@ -8,7 +9,10 @@ interface IndexProps {
 
 export default function Index({ projects }: IndexProps) {
   return (
-    <PageLayout title="Iliya Bolotov - Software Engineer">
+    <PageLayout
+      image={IndexImage.src}
+      title="Iliya Bolotov - Software Engineer"
+    >
       <Home projects={projects} />
     </PageLayout>
   );

@@ -1,7 +1,7 @@
 import { useCallback } from "react";
 import { AnimatePresence } from "framer-motion";
 import { IconButton, IconButtonProps, Tooltip } from "@chakra-ui/react";
-import { accentKeys, ColorKeys } from "styles/index";
+import { accentKeys, ColorKeys } from "styles/theme";
 import { useLocalSetting } from "hooks/common/use-local-setting";
 import { MotionBox } from "styles/motion";
 import AccentPickerIcon from "./accent-picker-icon";

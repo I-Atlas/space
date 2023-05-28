@@ -10,7 +10,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { MotionBox } from "styles/motion";
-import { getTagColor, useLinkColor } from "styles/index";
+import { getTagColor, useLinkColor } from "styles/theme";
 import { BiGitRepoForked, BiStar } from "react-icons/bi";
 import { FiGithub } from "react-icons/fi";
 

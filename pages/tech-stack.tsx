@@ -19,6 +19,7 @@ import { MotionBox } from "styles/motion";
 import { container, PageSlideFade } from "components/ui/page-transitions";
 import { skills } from "data/skills";
 import PageLayout from "../layouts/page";
+import SkillsImage from "public/assets/images/screenshots/skills.png";
 
 interface TechStackProps {
   skills: Skill[];
@@ -47,6 +48,7 @@ export default function TechStack({ skills }: TechStackProps) {
     <PageLayout
       title="Skills"
       keywords="node.js, nestjs, express, react-native, react, javascript, typescript"
+      image={SkillsImage.src}
     >
       <PageSlideFade>
         <VStack spacing={8}>

@@ -8,7 +8,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { AnimatePresence, motion } from "framer-motion";
-import { useLinkColor } from "styles/index";
+import { useLinkColor } from "styles/theme";
 import TagItem from "components/ui/tag/tag-item";
 
 interface ProjectCardProps {

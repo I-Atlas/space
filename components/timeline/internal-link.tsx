@@ -1,4 +1,3 @@
-import NextLink from "next/link";
 import { Link, LinkProps } from "@chakra-ui/react";
 
 interface InternalLinkProps extends LinkProps {
@@ -14,10 +13,8 @@ export default function InternalLink({
   ...props
 }: InternalLinkProps) {
   return (
-    <NextLink href={url} passHref>
-      <Link {...linkProps} {...props}>
-        {text}
-      </Link>
-    </NextLink>
+    <Link href={url} {...linkProps} {...props}>
+      {text}
+    </Link>
   );
 }

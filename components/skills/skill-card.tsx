@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { MotionBox } from "styles/motion";
 import { item } from "../ui/page-transitions";
-import { useLinkColor } from "styles/index";
+import { useLinkColor } from "styles/theme";
 
 interface SkillCardProps {
   name: string;

@@ -1,8 +1,6 @@
 import { AppProps, NextWebVitalsMetric } from "next/app";
-import { ChakraProvider } from "@chakra-ui/react";
 import { AnimatePresence } from "framer-motion";
 import { FontsGlobal } from "styles/fonts";
-import { theme } from "styles/index";
 import AppLayout from "layouts/app";
 import AccentGlobal from "components/ui/accent-picker/accent-global";
 import { QueryClient } from "@tanstack/query-core";
@@ -11,6 +9,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { useRouter } from "next/router";
 import { pageview } from "utils/gtag";
+import { ThemeProvider } from "components/ui/theme-provider";
 
 export function reportWebVitals(metric: NextWebVitalsMetric) {
   console.log(metric);
@@ -38,7 +37,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <QueryClientProvider client={queryClient.current}>
-      <ChakraProvider theme={theme} resetCSS={true}>
+      <ThemeProvider>
         <FontsGlobal />
         <AccentGlobal />
         <AppLayout>
@@ -49,7 +48,7 @@ export default function App({ Component, pageProps }: AppProps) {
             <Component {...pageProps} />
           </AnimatePresence>
         </AppLayout>
-      </ChakraProvider>
+      </ThemeProvider>
       <ReactQueryDevtools />
     </QueryClientProvider>
   );

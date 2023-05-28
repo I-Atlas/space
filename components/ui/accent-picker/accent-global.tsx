@@ -1,12 +1,12 @@
 import { useMemo } from "react";
 import { css, Global } from "@emotion/react";
 import { useLocalSetting } from "hooks/common/use-local-setting";
-import { ColorKeys, theme } from "styles/index";
+import { ColorKeys, extendedTheme } from "styles/theme";
 import { getTagBackgroundDark } from "styles/foundations/colors";
 
 export default function AccentGlobal() {
   const [accentKey] = useLocalSetting<ColorKeys>("accent", "red");
-  const accent = theme.colors[accentKey];
+  const accent = extendedTheme.colors[accentKey];
   const styles = useMemo(
     () => css`
       :root {
@@ -20,7 +20,10 @@ export default function AccentGlobal() {
         --colors-accent-700: ${accent[700]};
         --colors-accent-800: ${accent[800]};
         --colors-accent-900: ${accent[900]};
-        --colors-accent-tag-bg-dark: ${getTagBackgroundDark(accentKey, theme)};
+        --colors-accent-tag-bg-dark: ${getTagBackgroundDark(
+          accentKey,
+          extendedTheme
+        )};
       }
     `,
     // eslint-disable-next-line react-hooks/exhaustive-deps
