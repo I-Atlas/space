@@ -1,13 +1,13 @@
 import {
-  Stack,
+  Box,
+  Flex,
   IconButton,
   Link,
-  Box,
+  Stack,
   Text,
   useColorModeValue,
-  Flex,
 } from "@chakra-ui/react";
-import { configs } from "data/configs";
+import { configs } from "config/configs";
 
 const iconProps = {
   variant: "ghost",

@@ -1,6 +1,6 @@
 import type { FC, ReactNode } from "react";
 import { SlideFade } from "@chakra-ui/react";
-import { MotionBox } from "./motion";
+import { MotionBox } from "styles/motion";
 
 const staggerVariants = {
   initial: {

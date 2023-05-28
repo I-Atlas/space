@@ -1,16 +1,16 @@
 import NextLink from "next/link";
 import {
+  Box,
   HStack,
-  VStack,
+  Image,
+  Link,
   Text,
   useColorModeValue,
-  Box,
-  Link,
-  Image,
+  VStack,
 } from "@chakra-ui/react";
-import { MotionBox } from "../ui/motion";
+import { MotionBox } from "styles/motion";
 import { item } from "../ui/page-transitions";
-import { useLinkColor } from "components/ui/theme";
+import { useLinkColor } from "styles/index";
 
 interface SkillCardProps {
   name: string;

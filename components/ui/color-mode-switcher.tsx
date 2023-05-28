@@ -1,14 +1,14 @@
 import {
+  Box,
+  IconButton,
+  IconButtonProps,
+  Tooltip,
   useColorMode,
   useColorModeValue,
-  IconButtonProps,
-  IconButton,
-  Tooltip,
 } from "@chakra-ui/react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { AnimatePresence } from "framer-motion";
 import useSound from "use-sound";
-import { MotionBox } from "./motion";
 
 type ColorModeSwitcherProps = Omit<IconButtonProps, "aria-label">;
 
@@ -33,14 +33,9 @@ export default function ColorModeSwitcher({
   };
 
   return (
-    <AnimatePresence exitBeforeEnter initial={false}>
-      <MotionBox
+    <AnimatePresence initial={false}>
+      <Box
         onClick={handleClick}
-        key={mode === "dark" ? "dark-icon" : "light-icon"}
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        exit={{ y: 20, opacity: 0 }}
-        transition={{ duration: 0.2 }}
         cursor="pointer"
         fontSize={["2xl", "3xl", "3xl"]}
       >
@@ -60,7 +55,7 @@ export default function ColorModeSwitcher({
             {...props}
           />
         </Tooltip>
-      </MotionBox>
+      </Box>
     </AnimatePresence>
   );
 }

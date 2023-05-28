@@ -1,24 +1,24 @@
 import {
-  Box,
-  Image,
-  useColorModeValue,
-  VStack,
-  Text,
   AspectRatio,
-  HStack,
-  Tag,
-  Icon,
-  useDisclosure,
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalBody,
+  Box,
   Center,
   Flex,
+  HStack,
+  Icon,
+  Image,
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalOverlay,
+  Tag,
+  Text,
   Tooltip,
+  useColorModeValue,
+  useDisclosure,
+  VStack,
 } from "@chakra-ui/react";
-import { MotionBox } from "../ui/motion";
-import { getTagColor, useLinkColor } from "../ui/theme";
+import { MotionBox } from "styles/motion";
+import { getTagColor, useLinkColor } from "styles/index";
 import { AiOutlineStar } from "react-icons/ai";
 import { FiGithub } from "react-icons/fi";
 import { CardTransition } from "../ui/page-transitions";
@@ -51,7 +51,7 @@ export default function RepositoryCard({
 
   const handleLinkClick = (
     e: React.MouseEvent<HTMLParagraphElement, MouseEvent>,
-    link: string,
+    link: string
   ) => {
     window.open(link);
     e.stopPropagation();
@@ -75,7 +75,7 @@ export default function RepositoryCard({
 
   return (
     <CardTransition>
-      <Box onClick={onOpen} cursor="pointer">
+      <Box onClick={onOpen} cursor="pointer" width="100%">
         <VStack
           rounded="xl"
           borderWidth="1px"
@@ -103,7 +103,12 @@ export default function RepositoryCard({
                   borderBottomWidth="1px"
                   borderColor={useColorModeValue("gray.100", "#0a0a0a")}
                 >
-                  <LazyImage src={cover} blurHash={blurHash} />
+                  <LazyImage
+                    src={cover}
+                    blurHash={blurHash}
+                    layout="fill"
+                    fit="cover"
+                  />
                 </AspectRatio>
               </MotionBox>
             </MotionBox>

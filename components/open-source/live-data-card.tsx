@@ -1,16 +1,16 @@
 import {
   Box,
+  Flex,
+  HStack,
+  Icon,
+  Tag,
+  Text,
+  Tooltip,
   useColorModeValue,
   VStack,
-  Text,
-  HStack,
-  Tag,
-  Icon,
-  Flex,
-  Tooltip,
 } from "@chakra-ui/react";
-import { MotionBox } from "../ui/motion";
-import { getTagColor, useLinkColor } from "../ui/theme";
+import { MotionBox } from "styles/motion";
+import { getTagColor, useLinkColor } from "styles/index";
 import { BiGitRepoForked, BiStar } from "react-icons/bi";
 import { FiGithub } from "react-icons/fi";
 
@@ -35,7 +35,7 @@ export default function RepositoryCard({
 
   const handleLinkClick = (
     e: React.MouseEvent<HTMLParagraphElement, MouseEvent>,
-    link: string,
+    link: string
   ) => {
     window.open(link);
     e.stopPropagation();
@@ -44,6 +44,7 @@ export default function RepositoryCard({
   return (
     <MotionBox whileHover={{ y: -5 }}>
       <Box
+        width="100%"
         py={2}
         px={[2, 4]}
         mt={2}

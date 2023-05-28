@@ -17,6 +17,7 @@ const CardSkeleton = () => {
         return (
           <Box
             key={id}
+            width="100%"
             py={2}
             rounded="xl"
             borderWidth="1px"

@@ -1,7 +1,7 @@
-import { extendTheme, ThemeOverride } from "@chakra-ui/react";
-import { colors } from "./foundations/colors";
-import { mergeWith } from "@chakra-ui/utils";
-import { mode } from "@chakra-ui/theme-tools";
+import {extendTheme, ThemeOverride} from "@chakra-ui/react";
+import {colors} from "./foundations/colors";
+import {mergeWith} from "@chakra-ui/utils";
+import {mode} from "@chakra-ui/theme-tools";
 // Re-exports
 export { useLinkColor, accentKeys } from "./foundations/colors";
 export type { ColorKeys } from "./foundations/colors";
@@ -32,10 +32,9 @@ export const extendedTheme = extendTheme({
           color: "#b5f4a5 !important",
           fontStyle: "normal !important",
         },
-        "-webkit-tap-highlight-color": "transparent",
+        WebkitTapHighlightColor: "transparent",
       },
       a: {
-        color: mode("accent.500", "accent.200")(props),
         transition: "color 0.15s",
         transitionTimingFunction: "ease-out",
         fontWeight: "500",

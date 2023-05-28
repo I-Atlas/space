@@ -4,7 +4,7 @@ import { IconLink } from "./icon-link";
 
 const mobileLinks = [
   { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
+  { name: "Career", path: "/career" },
   { name: "Open Source", path: "/open-source" },
   { name: "Tech Stack", path: "/tech-stack" },
   { name: "Achievements", path: "/achievements" },

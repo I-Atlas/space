@@ -1,21 +1,21 @@
 import { useCallback, useEffect, useState } from "react";
 import {
-  Icon,
-  VStack,
   HStack,
-  Text,
-  Tabs,
-  TabList,
-  Tab,
-  useColorModeValue,
+  Icon,
   SimpleGrid,
+  Tab,
+  TabList,
+  Tabs,
+  Text,
+  useColorModeValue,
+  VStack,
 } from "@chakra-ui/react";
 import { AiFillThunderbolt } from "react-icons/ai";
-import { MdDesignServices, MdDesktopMac, MdCloud } from "react-icons/md";
+import { MdCloud, MdDesignServices, MdDesktopMac } from "react-icons/md";
 import SkillCard from "components/skills/skill-card";
 import Section from "components/skills/section";
 import Header from "components/layout/header";
-import { MotionBox } from "components/ui/motion";
+import { MotionBox } from "styles/motion";
 import { container, PageSlideFade } from "components/ui/page-transitions";
 import { skills } from "data/skills";
 import PageLayout from "../layouts/page";
@@ -40,7 +40,7 @@ export default function TechStack({ skills }: TechStackProps) {
         setSkillsList(skills);
       }
     },
-    [skills],
+    [skills]
   );
 
   return (
@@ -170,9 +170,9 @@ export default function TechStack({ skills }: TechStackProps) {
 }
 
 export function getStaticProps() {
-  return {
-    props: {
-      skills,
-    },
-  };
+    return {
+        props: {
+            skills,
+        },
+    };
 }

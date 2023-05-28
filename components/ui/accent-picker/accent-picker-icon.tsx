@@ -1,5 +1,5 @@
 import { Icon } from "@chakra-ui/react";
-import { useLinkColor } from "components/ui/theme";
+import { useLinkColor } from "styles/index";
 
 export default function AccentPickerIcon({ ...props }) {
   const color = useLinkColor();

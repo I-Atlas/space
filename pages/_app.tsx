@@ -1,32 +1,56 @@
-import { AppProps } from "next/app";
-import { useRouter } from "next/router";
-import { ChakraProvider, Box } from "@chakra-ui/react";
+import { AppProps, NextWebVitalsMetric } from "next/app";
+import { ChakraProvider } from "@chakra-ui/react";
 import { AnimatePresence } from "framer-motion";
-import { PrismGlobal } from "components/ui/theme/prism";
-import { FontsGlobal } from "components/ui/theme/fonts";
-import { theme } from "components/ui/theme";
-import AccentGlobal from "components/ui/accent-picker/accent-global";
+import { FontsGlobal } from "styles/fonts";
+import { theme } from "styles/index";
 import AppLayout from "layouts/app";
+import AccentGlobal from "components/ui/accent-picker/accent-global";
+import { QueryClient } from "@tanstack/query-core";
+import { useEffect, useRef } from "react";
+import { QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { useRouter } from "next/router";
+import { pageview } from "utils/gtag";
+
+export function reportWebVitals(metric: NextWebVitalsMetric) {
+  console.log(metric);
+}
 
 export default function App({ Component, pageProps }: AppProps) {
+  /**
+   * React Query Configuration
+   */
+  const queryClient = useRef(new QueryClient());
+
+  /**
+   * Gtag helpers
+   */
   const router = useRouter();
+  useEffect(() => {
+    const handleRouteChange = (url: string) => {
+      pageview(url);
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
 
   return (
-    <ChakraProvider theme={theme} resetCSS={true}>
-      <FontsGlobal />
-      <AccentGlobal />
-      <PrismGlobal />
-      <AppLayout>
-        <AnimatePresence
-          exitBeforeEnter
-          initial={false}
-          onExitComplete={() => window.scrollTo(0, 0)}
-        >
-          <Box key={router.route}>
+    <QueryClientProvider client={queryClient.current}>
+      <ChakraProvider theme={theme} resetCSS={true}>
+        <FontsGlobal />
+        <AccentGlobal />
+        <AppLayout>
+          <AnimatePresence
+            initial={false}
+            onExitComplete={() => window.scrollTo(0, 0)}
+          >
             <Component {...pageProps} />
-          </Box>
-        </AnimatePresence>
-      </AppLayout>
-    </ChakraProvider>
+          </AnimatePresence>
+        </AppLayout>
+      </ChakraProvider>
+      <ReactQueryDevtools />
+    </QueryClientProvider>
   );
 }

@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
-    "target": "ES6",
+    "target": "ES2022",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
+    "strictPropertyInitialization": false,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
@@ -19,11 +20,15 @@
       "*": ["/*"],
       "components/*": ["components/*"],
       "layouts/*": ["layouts/*"],
+      "styles/*": ["styles/*"],
       "data/*": ["data/*"],
       "pages/*": ["pages/*"],
-      "public/*": ["public/*"],
       "hooks/*": ["hooks/*"],
-      "constants/*": ["constants/*"]
+      "public/*": ["public/*"],
+      "utils/*": ["utils/*"],
+      "services/*": ["services/*"],
+      "types/*": ["types/*"],
+      "config/*": ["config/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
