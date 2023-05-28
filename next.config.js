@@ -20,6 +20,7 @@ const nextConfig = {
   env: {
     GITHUB_API_URL: process.env.GITHUB_API_URL,
     APP_URL: process.env.APP_URL,
+    GA_ID: process.env.GA_ID,
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {
