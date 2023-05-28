@@ -17,6 +17,16 @@ export default function Timeline() {
         </Header>
       </Box>
       <VStack textAlign="start" align="start" mb={5}>
+      <Box>
+          <Heading fontSize="2xl" fontWeight="600" my={5}>
+            2022
+          </Heading>
+          <Box>
+            <TimelineItem icon={FiAward} skipTrail>
+              With my team KISS won first place in Hackathon Cybersecurity of citizens
+            </TimelineItem>
+          </Box>
+        </Box>
         <Box>
           <Heading fontSize="2xl" fontWeight="600" my={5}>
             2022
