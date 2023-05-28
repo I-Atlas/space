@@ -1,14 +1,14 @@
 import { useState } from "react";
 import {
   HStack,
-  VStack,
+  Image,
+  Link,
   Text,
   useColorModeValue,
-  Link,
-  Image,
+  VStack,
 } from "@chakra-ui/react";
-import { motion, AnimatePresence } from "framer-motion";
-import { useLinkColor } from "components/ui/theme";
+import { AnimatePresence, motion } from "framer-motion";
+import { useLinkColor } from "styles/index";
 import TagItem from "components/ui/tag/tag-item";
 
 interface ProjectCardProps {

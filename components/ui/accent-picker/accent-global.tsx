@@ -1,8 +1,8 @@
 import { useMemo } from "react";
 import { css, Global } from "@emotion/react";
-import { useLocalSetting } from "hooks/use-local-setting";
-import { theme, ColorKeys } from "components/ui/theme";
-import { getTagBackgroundDark } from "components/ui/theme/foundations/colors";
+import { useLocalSetting } from "hooks/common/use-local-setting";
+import { ColorKeys, theme } from "styles/index";
+import { getTagBackgroundDark } from "styles/foundations/colors";
 
 export default function AccentGlobal() {
   const [accentKey] = useLocalSetting<ColorKeys>("accent", "red");
@@ -24,7 +24,7 @@ export default function AccentGlobal() {
       }
     `,
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [accentKey],
+    [accentKey]
   );
   return <Global styles={styles} />;
 }

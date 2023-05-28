@@ -1,9 +1,9 @@
 import { useCallback } from "react";
 import { AnimatePresence } from "framer-motion";
-import { Tooltip, IconButton, IconButtonProps } from "@chakra-ui/react";
-import { ColorKeys, accentKeys } from "components/ui/theme";
-import { useLocalSetting } from "hooks/use-local-setting";
-import { MotionBox } from "../motion";
+import { IconButton, IconButtonProps, Tooltip } from "@chakra-ui/react";
+import { accentKeys, ColorKeys } from "styles/index";
+import { useLocalSetting } from "hooks/common/use-local-setting";
+import { MotionBox } from "styles/motion";
 import AccentPickerIcon from "./accent-picker-icon";
 import useSound from "use-sound";
 
@@ -24,7 +24,7 @@ export default function AccentPicker({ ...props }: IconButtonProps) {
   }, [key, play, setAccentKey]);
 
   return (
-    <AnimatePresence exitBeforeEnter initial={false}>
+    <AnimatePresence initial={false}>
       <MotionBox fontSize={["2xl", "3xl", "3xl"]}>
         <Tooltip label="Color mode" aria-label="Color tooltip">
           <IconButton

@@ -1,11 +1,11 @@
 import { useState } from "react";
 import {
-  VStack,
-  Text,
-  useColorModeValue,
   HStack,
   IconButton,
+  Text,
   Tooltip,
+  useColorModeValue,
+  VStack,
 } from "@chakra-ui/react";
 import { RiSignalTowerLine, RiWifiOffLine } from "react-icons/ri";
 import useSound from "use-sound";
@@ -15,7 +15,7 @@ import LiveData from "components/open-source/live-data";
 import PageLayout from "layouts/page";
 import { PageSlideFade } from "components/ui/page-transitions";
 import { repositories } from "data/repositories";
-import { TURQUOISE } from "constants/constants";
+import { TURQUOISE } from "config/constants";
 
 const iconProps = {
   variant: "ghost",

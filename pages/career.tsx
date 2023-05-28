@@ -1,19 +1,19 @@
-import { VStack, Heading, Flex, useColorMode } from "@chakra-ui/react";
+import { Flex, Heading, useColorMode, VStack } from "@chakra-ui/react";
 import { PageSlideFade, StaggerChildren } from "components/ui/page-transitions";
-import { MotionBox } from "components/ui/motion";
+import { MotionBox } from "styles/motion";
 import { companies } from "data/companies";
 import { institutes } from "data/institutes";
 import Header from "components/layout/header";
 import PageLayout from "layouts/page";
 import Card from "components/layout/card";
-import { TURQUOISE } from "constants/constants";
+import { TURQUOISE } from "config/constants";
 
 interface AboutProps {
   companies: Company[];
   institutes: Institute[];
 }
 
-export default function About({ companies, institutes }: AboutProps) {
+export default function Career({ companies, institutes }: AboutProps) {
   const { colorMode } = useColorMode();
 
   return (

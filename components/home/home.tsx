@@ -1,21 +1,20 @@
 import NextLink from "next/link";
 import {
-  Flex,
   Avatar,
   Box,
-  Text,
-  Badge,
-  Stack,
+  Flex,
   Link,
-  UnorderedList,
   ListItem,
+  Stack,
+  Text,
+  UnorderedList,
   useColorModeValue,
 } from "@chakra-ui/react";
 import Header from "components/layout/header";
 import Projects from "components/projects/projects";
-import { MotionBox, MotionFlex } from "components/ui/motion";
-import { useLinkColor } from "components/ui/theme";
-import { ANIMATION_DURATION, ORANGE } from "constants/constants";
+import { MotionBox, MotionFlex } from "styles/motion";
+import { useLinkColor } from "styles/index";
+import { ANIMATION_DURATION, ORANGE } from "config/constants";
 
 interface HomeProps {
   projects: Project[];
@@ -132,9 +131,9 @@ export default function Home({ projects }: HomeProps) {
                 <NextLink href="/achievements" passHref>
                   <Link color={linkColor}>
                     Achievements
-                    <Badge ml="1" colorScheme="yellow">
-                      New
-                    </Badge>
+                    {/*<Badge ml="1" colorScheme="yellow">*/}
+                    {/*  New*/}
+                    {/*</Badge>*/}
                   </Link>
                 </NextLink>
               </ListItem>

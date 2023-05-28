@@ -1,8 +1,5 @@
 import { useColorModeValue, useTheme } from "@chakra-ui/react";
-import {
-  ColorKeys,
-  getTagBackgroundDark,
-} from "components/ui/theme/foundations/colors";
+import { ColorKeys, getTagBackgroundDark } from "styles/foundations/colors";
 
 export function useTagStyles(colorScheme: ColorKeys = "accent") {
   const theme = useTheme();
@@ -11,7 +8,7 @@ export function useTagStyles(colorScheme: ColorKeys = "accent") {
       `${colorScheme}.100`,
       colorScheme === "accent"
         ? "var(--colors-accent-tag-bg-dark)"
-        : getTagBackgroundDark(colorScheme, theme),
+        : getTagBackgroundDark(colorScheme, theme)
     ),
     color: useColorModeValue(`${colorScheme}.800`, `${colorScheme}.200`),
   };

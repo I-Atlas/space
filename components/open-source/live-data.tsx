@@ -1,8 +1,8 @@
-import { SimpleGrid, Box } from "@chakra-ui/react";
+import { Box, SimpleGrid } from "@chakra-ui/react";
 import { PageSlideFade } from "../ui/page-transitions";
 import RepositoryCard from "./live-data-card";
 import CardSkeleton from "./card-skeleton";
-import useFetch from "use-http";
+import { useGetMyGithubRepositories } from "hooks/query/use-get-my-github-repositories";
 
 interface GithubRepository {
   name: string;
@@ -15,15 +15,11 @@ interface GithubRepository {
 }
 
 export default function LiveDataCard() {
-  const { loading, data = [] } = useFetch<GithubRepository[]>(
-    "https://api.github.com/users/I-Atlas/repos",
-    {},
-    [],
-  );
+  const { data, isLoading } = useGetMyGithubRepositories();
 
   return (
     <PageSlideFade>
-      {loading ? (
+      {isLoading ? (
         <SimpleGrid columns={[1, 1, 2]} spacing={4} mt={4}>
           <CardSkeleton />
         </SimpleGrid>
@@ -31,7 +27,7 @@ export default function LiveDataCard() {
         <Box mt={4}>
           <SimpleGrid columns={[1, 1, 2]} spacing={4} mt={4}>
             {data
-              .filter((repo) => !repo.archived)
+              ?.filter((repo) => !repo.archived)
               .sort((a, b) => b.stargazers_count - a.stargazers_count)
               .slice(0, 8)
               .map((repo, index: number) => (

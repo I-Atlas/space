@@ -1,10 +1,18 @@
 export const companies: Company[] = [
   {
+    title: "Pontem Network",
+    alt: "pontem",
+    role: "Senior Software Engineer",
+    skills: ["typescript", "react-native", "node.js"],
+    period: "Oct 2022 - Present",
+    logo: "/assets/images/companies/pontem.png",
+  },
+  {
     title: "trember GmbH",
     alt: "trember",
     role: "Software Engineer & Consultant",
     skills: ["typescript", "react", "node.js"],
-    period: "Jan 2022 - Present",
+    period: "Jan 2022 - Oct 2022",
     logo: "/assets/images/companies/trember.jpg",
   },
   {
@@ -14,14 +22,6 @@ export const companies: Company[] = [
     skills: ["typescript", "react", "node.js"],
     period: "Nov 2020 - Jan 2022",
     logo: "/assets/images/companies/umbrellait.jpg",
-  },
-  {
-    title: "Ultrasenses",
-    alt: "ultrasenses",
-    role: "Co-Founder & Flutter developer",
-    skills: ["management", "dart", "flutter"],
-    period: "Oct 2021 - Feb 2022",
-    logo: "/assets/images/companies/ultrasenses.jpg",
   },
   {
     title: "Fusion Tech",

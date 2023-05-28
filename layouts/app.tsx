@@ -1,8 +1,8 @@
 import type { PropsWithChildren } from "react";
 import { Box } from "@chakra-ui/react";
-import Footer from "components/layout/footer";
 import TopNavigation from "components/layout/navigation/top-navigation";
 import BottomNavigation from "components/layout/navigation/bottom-navigation";
+import Footer from "components/layout/footer";
 
 export default function AppLayout({ children }: PropsWithChildren<{}>) {
   return (
